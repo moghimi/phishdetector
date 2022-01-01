@@ -1,0 +1,62 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 5px;
+	padding: 0;
+	border: 0;
+	font-size: 14px;
+	vertical-align: baseline;
+	word-wrap: break-word;
+}
+
+body {
+	width: 200px;
+	padding: 0px;
+	margin: 0px;
+	line-height: 1.2;
+	background: #fff;
+}
+
+
+#copyright {
+	font-size: 10px;
+	color: #a7a7a7;
+	
+}
+
+#result {
+	height: fit-content;
+    text-align: center;
+}
+
+.domain {
+	font-weight: bold;
+	color: #d50505;
+	text-align: center;	
+}
+
+.space {
+	height: 20px;
+}
+
+.loading {
+	background: url(../img/loading.gif) 50% 0% no-repeat;
+	padding-top: 60px;
+}
+
+.unknown {
+	background: url(../img/unknown.png) 50% 0% no-repeat;
+	padding-top: 60px;
+}
+
+
+.legitimate {
+	background: url(../img/legitimate.jpg) 50% 0% no-repeat;
+	padding-top: 60px;
+}
+
+
+.phishing {
+	background: url(../img/phishing.jpg) 50% 0% no-repeat;
+	padding-top: 60px;
+}
+
+

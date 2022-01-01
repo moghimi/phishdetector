@@ -1,0 +1,14 @@
+{
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "A Rule-Based phishing attack detector for Online-Banking web sites"
+   },
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "PhishDetector - True Phishing Detection"
+   },
+   "appShortName": {
+      "description": "The short title of the application, displayed in the web store.",
+      "message": "PhishDetector"
+   }
+}
