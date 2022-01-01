@@ -6,21 +6,24 @@ This is an open source version of the original PhishDetector extension which is 
 
 https://chrome.google.com/webstore/detail/kgecldbalfgmgelepbblodfoogmjdgmj
 
-# Privacy
+## Privacy
 
-## Single purpose:
+### Single purpose:
 
 The extension analyzes page content to detect phishing attack when user opens the extension's popup page by clicking on the it's icon.
 
-## Permission justification:
+### Permission justification:
 
 The extension reads page content to analyze it when user opens the extension's popup page by clicking on the extension's icon.
 The extension does not collect, transmit or share user data. It just reads page contents and analyses them to find any suspicious content source.
 
-# Download
+## Download
 
 - [Chrome Store](https://chrome.google.com/webstore/detail/kgecldbalfgmgelepbblodfoogmjdgmj)
 
-# Support
+## Support
 
 Please report any issues with phishdetector by filing an issue on [issues](https://github.com/moghimi/phishdetector/issues) page.
+
+## License
+Licensed under MIT license.
