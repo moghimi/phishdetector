@@ -1,0 +1,7 @@
+{
+  "name": "phishdetector-extension",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  }
+}
