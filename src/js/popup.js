@@ -1,11 +1,17 @@
 window.onload = function () {
-	$("#copyright").html("&copy;2013-" + (new Date).getFullYear() + ",&nbsp;PhishDetector&reg;&nbsp;" + chrome.app.getDetails().version)
+	var version = chrome.runtime.getManifest().version;
+	document.getElementById("copyright").innerHTML = "&copy;2013-" + (new Date).getFullYear() + ",&nbsp;PhishDetector&reg;&nbsp;" + version;
 	chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+		if (!tabs.length) {
+			setResult("Unknown", "No active webpage was found.");
+			return;
+		}
+
 		chrome.tabs.sendMessage(tabs[0].id, { type: "getFeatures" }, function (response) {
-			var data = { Result: 'Unknown', Confidence: 0, Rule: 0, Info: "PDIE v" + chrome.app.getDetails().version };
+			var data = { Result: 'Unknown', Confidence: 0, Rule: 0, Info: "PDIE v" + version };
 			var result = "Communication Error!<br> Check your connection to internet and try again. ";
 			if (typeof response == 'undefined' || response.length == 0 || response == null) {
-				$("#result").removeClass('loading').addClass("Unknown").html("Please refresh the webpage and try again. ");
+				setResult("Unknown", "Please refresh the webpage and try again. ");
 			}
 			else {
 				var Domain = response.Domain;
@@ -108,9 +114,16 @@ window.onload = function () {
 					result = "Unfortunately we couldn't inspect the page which you are browsing. " +
 						"<b>Please be careful to submit your sensetive information.</b>";
 				}
-				$("#result").removeClass('loading').addClass(data.Result).html(result);
+				setResult(data.Result, result);
 			}
 		});
 	});
 };
+
+function setResult(resultClass, html) {
+	var resultElement = document.getElementById("result");
+	resultElement.classList.remove("loading");
+	resultElement.classList.add(resultClass);
+	resultElement.innerHTML = html;
+}
 
